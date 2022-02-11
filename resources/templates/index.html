@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="#{index.title}"> | Excellent Voyage</title>
+    <link rel="stylesheet" th:href="@{/styles/global.css}" />
+    <link rel="stylesheet" th:href="@{/styles/home.css}" />
+</head>
+<body>
+    <div class="home-container box">
+        <div th:insert="components/navbar.html"></div>
+        <main>
+            <div class="hero-container">
+                <p th:text="#{index.text}"></p>
+                <img th:src="@{/image/hero.png}" />
+            </div>
+            <div class="pacotes-container">
+                <form id="form" class="filtro" th:action="@{/}" method="GET">
+                    <input type="text" class="campo" name="destino" style="width: 350px;" th:placeholder="#{index.destino}" th:value="*{destino}" />
+                    <input type="text" class="campo" name="nomeAgencia" style="width: 350px;" th:placeholder="#{index.agencia}" th:value="*{nomeAgencia}"/>
+                    <input type="text" class="campo" name="dataPartida" onfocus="(this.type='date')" style="width: 250px;" th:placeholder="#{index.data}" th:value="*{dataPartida}"/>
+                    <input type="submit" id="submit" class="botao-filtrar" th:value="#{index.filtro}" />
+                </form>
+                <div th:insert="components/listaPacotes.html"></div>
+                <!-- <jsp:include page="components/listaPacotes.jsp">
+                    <jsp:param name="comprar" value="true" />
+                </jsp:include> -->
+            </div>
+        </main>
+    </div>
+
+    <!-- <script type="text/javascript">
+        const submit = document.getElementById("submit");
+        const paths = location.pathname.split("/");
+        if (paths[paths.length - 1] !== "home") {
+            submit.click();
+        }
+    </script> -->
+</body>
+
+<!--</fmt:bundle>-->
+</html>

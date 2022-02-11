@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Excellent Voyage</title>
+    <link rel="stylesheet" th:href="@{/styles/global.css}" />
+    <link rel="stylesheet" th:href="@{/styles/home.css}" />
+    <link rel="stylesheet" th:href="@{/styles/pacote.css}" />
+</head>
+<body>
+    <div class="home-container box">
+        <div th:insert="components/navbar.html" ></div>
+        <main>
+            <div class="pacote-container">
+                <div class="lista-fotos" var="fotos" items="${pacote.getFotos()}">
+                  <div th:each="foto : ${pacote.fotos}">
+                    <div class="foto" th:style="'background-image: url(' + @{${foto.url}} + ');'"></div>
+                  </div>
+                </div>
+
+                <div class="informacoes-pacote">
+                        <div class="pacote-infos">
+                            <h1 th:text="${pacote.destinoCidade}"></h1>
+                            <h2><span th:text="#{pacote.viagemPor}"></span> <strong th:text="${pacote.agencia.nome}"></strong></h2>
+                            <p th:text="#{pacote.valor}"></p>
+                            <h2 id="pacote-preco"><span th:text="#{listapacote.moeda}"></span> <span th:text="${pacote.valor}"></span></h2>
+                            <h2 id="info-adicionais"><fmt:message key="pacote.infos"/></h2>
+                            <p th:text="#{pacote.estado}"></p>
+                            <h3 th:text="${pacote.destinoEstado}"></h3>
+                            <p th:text="#{pacote.pais}"></p>
+                            <h3 th:text="${pacote.destinoPais}"></h3>
+                            <p th:text="#{pacote.dataPartida}"></p>
+                            <h3 th:text="${pacote.dataPartida}"></h3>
+                            <p th:text="#{pacote.duracao}"></p>
+                            <h3 th:text="${pacote.duracaoDias}"></h3>
+                            <p th:text="#{pacote.descricao}"></p>
+                            <a th:href="@{${pacote.descricao}}" th:text="#{pacote.descricao}"></a>
+                        </div>
+
+                        <div sec:authorize="hasRole('ROLE_cliente')">
+                            <div class="pacote-compra">
+                                <div th:if="${jacomprou}">
+                                    <div class="pacote-compra">
+                                        <span th:text="#{pacote.compraRealizada}"></span>
+                                    </div>
+                                </div>
+                                <div th:if="${!jacomprou}">
+                                    <a type="submit" name="comprar" th:href="@{?comprou=true}" th:text="#{pacote.comprar}"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <c:if test="${sessionScope.usuarioLogado.tipo == 'cliente'}">
+                            <c:choose>
+                                <c:when test="${jacomprou}">
+                                    <div class="pacote-compra">
+                                        <span><fmt:message key="pacote.compraRealizada"/></span>
+                                    </div>
+                                </c:when>
+                                <c:otherwise>
+                                    <form class="pacote-compra" action="pacote?id=${param.id}&comprou=1" method="POST">
+                                        <input type="submit" name="comprar" value="<fmt:message key='pacote.comprar'/>"/>
+                                    </form>
+                                </c:otherwise>
+                            </c:choose>
+                        </c:if> -->
+                </div>
+            </div>
+        </main>
+</body>
+</html>
