@@ -1,4 +1,4 @@
-.cadastro-cliente-container {
+.cadastro-agencia-container {
     position: relative;
 
     padding: 115px 0 80px;
@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-.form-cadastro-cliente {
+.form-cadastro-agencia {
     padding: 30px 70px 54px;
 
     width: 100%;
@@ -24,7 +24,7 @@
     flex-direction: column;
 }
 
-.form-cadastro-cliente h1 {
+.form-cadastro-agencia h1 {
     margin-bottom: 40px;
 
     font-size: 48px;
@@ -34,7 +34,7 @@
     color: var(--black)
 }
 
-.form-cadastro-cliente .campos {
+.form-cadastro-agencia .campos {
     margin-bottom: 30px;
 
     display: grid;
@@ -43,32 +43,32 @@
     row-gap: 7px;
 }
 
-.form-cadastro-cliente .campos .campo-container {
+.form-cadastro-agencia .campos .campo-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.form-cadastro-cliente .campos .campo-container label {
+.form-cadastro-agencia .campos .campo-container label {
     margin-bottom: 4px;
 
     font-size: 30px;
 }
 
-.form-cadastro-cliente .campos .campo-container .campo {
+.form-cadastro-agencia .campos .campo-container .campo {
     padding: 0 20px;
 
     width: 100%;
     height: 70px;
 }
 
-.form-cadastro-cliente .campos .campo-container textarea {
+.form-cadastro-agencia .campos .campo-container textarea {
     height: 216px !important;
 
     resize: none;
 }
 
-.form-cadastro-cliente .submit {
+.form-cadastro-agencia .submit {
     margin-top: calc(-64px - 30px);
 
     width: 214px;
@@ -91,6 +91,6 @@
     transition: all 0.2s;
 }
 
-.form-cadastro-cliente .submit:hover {
+.form-cadastro-agencia .submit:hover {
     opacity: 0.8;
 }
