@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edição Cliente | Excellent Voyage</title>
+    <link rel="stylesheet" href="../resources/static/styles/global.css" />
+    <link rel="stylesheet" href="../resources/static/styles/cadastro-cliente.css" />
+<body>
+    <div class="cadastro-cliente-container box">
+        <a class="botao-voltar" href="index.html"><img src="../image/icons/arrow-left.svg" />Voltar</a>
+        
+        <form class="form-cadastro-cliente">
+            <h1>Edição Cliente #1050</h1>
+            <div class="campos">
+                <div class="campo-container">
+                    <label for="nome">Nome</label>
+                    <input class="campo" id="nome" name="nome" type="text"/>
+                </div>
+                <div class="campo-container">
+                    <label for="email">Email</label>
+                    <input class="campo" id="email" name="email" type="text"/>
+                </div>
+                <div class="campo-container">
+                    <label for="cpf" >CPF</label>
+                    <input class="campo" id="cpf" name="cpf" type="text"/>
+                </div>
+                <div class="campo-container">
+                    <label for="telefone" >Telefone</label>
+                    <input class="campo" id="telefone" name="telefone" type="text"/>
+                </div>
+                <div class="campo-container">
+                    <label for="sexo">Sexo</label>
+                    <select class="campo" id="sexo" name="sexo" type="text" >
+                        <option value="" selected hidden >Selecione o sexo</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino" >Feminino</option>
+                    </select>
+                </div>
+                <div class="campo-container">
+                    <label for="data-nascimento" >Data de Nascimento</label>
+                    <input class="campo" id="data-nascimento" name="dataNascimento" type="date"/>
+                </div>
+                <div class="campo-container">
+                    <label for="senha" >Senha</label>
+                    <input class="campo" id="senha" name="senha" type="password"/>
+                </div>
+                <div class="campo-container">
+                    <label for="confirmarSenha">Confime sua senha</label>
+                    <input class="campo" id="confirmarSenha" name="confirmarSenha" type="password"/>
+                </div>
+            </div>
+            <input class="submit" type="submit" name="bOK"/>
+        </form>
+    </div>
+</body>
+</html>
