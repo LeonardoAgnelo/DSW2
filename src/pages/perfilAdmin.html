@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfil | Excellent Voyage</title>
+    <title>Perfil Admin | Excellent Voyage</title>
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/perfil.css" />
 </head>
@@ -14,7 +14,7 @@
             <ul class="right-side">
                 <li>
                   <a href="perfilAdmin.html" class="botao-logado">
-                      <img src="../image/icons/person-circle.svg"/><p>Alan</p>
+                      <img src="../image/icons/person-circle.svg"/><p>Admin</p>
                   </a>
                 </li>
                 <li>
@@ -29,7 +29,6 @@
         <div class="texto-inicio">
             <h1>
               <span> Olá Admin,</span>
-              
             </h1>
         </div>
     
@@ -50,12 +49,12 @@
                 </tr>
                 <tr>
                     <td>1</td>
-                        <td th:text="${Cliente.nome}">Alan</td>
-                        <td th:text="${Cliente.cpf}">676.583.990-94</td>
-                        <td th:text="${Cliente.email}">Alan@gmail.com</td>
-                        <td th:text="${Cliente.sexo}">Masculino</td>
-                        <td th:text="${Cliente.telefone}">(16)99856-5241</td>
-                        <td th:text="${#calendars.format(Cliente.dataNascimento, 'dd/MM/yyyy')}">11/12/1995</td>
+                        <td >Alan</td>
+                        <td >676.583.990-94</td>
+                        <td >Alan@gmail.com</td>
+                        <td >Masculino</td>
+                        <td >(16)99856-5241</td>
+                        <td >11/12/1995</td>
                         <td><a href="formularioEdicaoCliente.html">Editar</a></td>
                         <td><a href="index.html" onclick="return confirm('Tem certeza de que deseja excluir este usuário? todas as compras deste usuário serão excluidas');">Remover</a></td>
                 </tr>
