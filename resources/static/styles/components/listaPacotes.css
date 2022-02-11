@@ -28,9 +28,9 @@
 
 .pacote .pacote-content {
   width: 100%;
-  height: 100px;
+  height: 111px;
 
-  padding: 0 17px 17px;
+  padding: 0 17px;
 
   display: flex;
   align-items: center;
@@ -56,7 +56,7 @@
   align-items: flex-end;
 }
 
-.pacote .pacote-content .pacote-compra span{
+.pacote .pacote-content .pacote-compra strong{
   margin-bottom: 10px;
 
   font-size: 21px;

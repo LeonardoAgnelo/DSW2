@@ -15,6 +15,10 @@
     align-items: center;
 }
 
+.navbar-container .right-side li + li {
+  margin-left: 60px;
+}
+
 .navbar-container .right-side .botao-login {
     color: var(--secundary);
 }
@@ -24,8 +28,6 @@
 }
 
 .navbar-container .right-side .botao-cadastro {
-    margin-left: 60px;
-
     width: 236px;
     height: 70px;
 

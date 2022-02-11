@@ -54,6 +54,10 @@ a {
     text-decoration: none !important;
 }
 
+ul {
+  list-style: none;
+}
+
 .logo {
     height: 106px;
 }

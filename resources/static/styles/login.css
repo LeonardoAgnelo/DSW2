@@ -1,5 +1,5 @@
 body {
-    background-image: url(../image/background.png);
+    background-image: url(../../../image/background.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -85,7 +85,7 @@ body {
 }
 
 
-.form-login input[type="submit"] {
+.form-login .submit {
     margin: 31px 19px;
 
     width: 196px;

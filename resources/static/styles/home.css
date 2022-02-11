@@ -13,9 +13,10 @@
     justify-content: center;
 }
 
-.hero-container p {
+.hero-container h1 {
     max-width: 500px;
 
+    font-size: 64px;
     font-weight: 500;
 }
 
