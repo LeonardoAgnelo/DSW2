@@ -14,7 +14,7 @@
 
 .foto{
   width: 450px;
-  height: 450px;
+  height: auto;
   background-color: white;
   border-radius: 15px;
 
@@ -24,6 +24,10 @@
   background-repeat: no-repeat;
 
   margin: 0px 50px 0px 0px !important;
+}
+
+.foto img{
+  width: 100%;
 }
 
 .informacoes-pacote{
