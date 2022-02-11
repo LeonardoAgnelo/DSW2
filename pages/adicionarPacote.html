@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excellent Voyage</title>
+    <link rel="stylesheet" href="../resources/static/styles/global.css" />
+    <link rel="stylesheet" href="../resources/static/styles/cadastro-cliente.css" />
+</head>
+<body>
+    <div class="cadastro-cliente-container box">
+        <a class="botao-voltar" href="index.html"><img src="../image/icons/arrow-left.svg" />Voltar</a>
+        <form class="form-cadastro-cliente" method="POST">
+            <h1>Adicionar Pacote</h1>
+            <div class="campos">
+                <div class="campo-container">
+                    <label for="destinoCidade">Cidade</label>
+                    <input class="campo" id="destinoCidade" type="text"/>
+
+                </div>
+                <div class="campo-container">
+                    <label for="destinoEstado">Estado</label>
+                    <input class="campo" id="destinoEstado" type="text"/>
+                </div>
+
+                <div class="campo-container">
+                    <label for="destinoPais">País</label>
+                    <input class="campo" id="destinoPais" type="text"/>
+                </div>
+
+                <div class="campo-container">
+                    <label for="data-partida">Data de partida</label>
+                    <input class="campo" id="dataPartida" type="date"/>
+                </div>
+
+                <div class="campo-container">
+                    <label for="valor">Valor de pacote</label>
+                    <input class="campo" id="valor" type="valor" th:field="*{valor}"/>
+                </div>
+
+                <div class="campo-container">
+                    <label for="duracaoDias">Duração do pacote</label>
+                    <input class="campo" id="duracaoDias" type="number" th:field="*{duracaoDias}"/>
+
+                </div>
+
+                <div class="campo-container">
+                    <label for="descricaoFile">Descrição do pacote</label>
+                    <input type="file" id="descricaoFile" />
+                </div>
+
+                <div class="campo-container">
+                    <label for="fotosFile">Adicionar fotos</label>
+                    <input type="file" id="fotosFile" multiple />
+                </div>
+            </div>
+            <input class="submit" type="submit" value="Adicionar" />
+        </form>
+    </div>
+</body>
+</html>
