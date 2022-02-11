@@ -3,7 +3,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title th:text="#{perfil.title}"> | Excellent Voyage</title>
+    <title>Perfil | Excellent Voyage</title>
     <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/perfil.css" />
 </head>
@@ -49,14 +49,14 @@
     
                 </tr>
                 <tr>
-                    <td th:text="${Cliente.id}">1</td>
+                    <td>1</td>
                         <td th:text="${Cliente.nome}">Alan</td>
                         <td th:text="${Cliente.cpf}">676.583.990-94</td>
                         <td th:text="${Cliente.email}">Alan@gmail.com</td>
                         <td th:text="${Cliente.sexo}">Masculino</td>
                         <td th:text="${Cliente.telefone}">(16)99856-5241</td>
                         <td th:text="${#calendars.format(Cliente.dataNascimento, 'dd/MM/yyyy')}">11/12/1995</td>
-                        <td><a href="cadastroCliente.html">Editar</a></td>
+                        <td><a href="formularioEdicaoCliente.html">Editar</a></td>
                         <td><a href="index.html" onclick="return confirm('Tem certeza de que deseja excluir este usuário? todas as compras deste usuário serão excluidas');">Remover</a></td>
                 </tr>
             </table>
@@ -67,19 +67,19 @@
                 <caption style="margin-top: 30px;"> Tabela de Agencias</caption>
                 <tr>
                     <th>ID</th>
-                    <th th:text="#{cadastro.nome}"> Nome</th>
-                    <th th:text="#{cadastro.cnpj}">CNPJ</th>
-                    <th th:text="#{cadastro.email}">Email</th>
-                    <th th:text="#{admin.editar}">Editar</th>
-                    <th th:text="#{admin.remover}">Remover</th>
+                    <th> Nome</th>
+                    <th>CNPJ</th>
+                    <th>Email</th>
+                    <th>Editar</th>
+                    <th>Remover</th>
                 </tr>
     
                     <tr>
-                        <td th:text="${Agencia.id}">1</td>
-                        <td th:text="${Agencia.nome}">CVC</td>
-                        <td th:text="${Agencia.cnpj}">44.678.971/0001-60</td>
-                        <td th:text="${Agencia.email}">cvc@gmail.com</td>
-                        <td><a href="cadastroAgencia.html">Editar</a></td>
+                        <td>1</td>
+                        <td>CVC</td>
+                        <td>44.678.971/0001-60</td>
+                        <td>cvc@gmail.com</td>
+                        <td><a href="formularioEdicaoAgencia.html">Editar</a></td>
                         <td><a href="index.html" onclick="return confirm('Tem certeza de que deseja excluir este usuário? todas os pacotes turisticos desta agencia serão excluidos');">Remover</a></td>
                     </tr>
                 </c:forEach>
