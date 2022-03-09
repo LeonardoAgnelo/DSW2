@@ -18,7 +18,7 @@
     --secundary: #0073D9;
 
     --gray: #F4F4F4;
-    --gray-dark: #808080;
+    --gray-dark: #5a4949;
 
     --degrade: linear-gradient(276.05deg, #F46918 37.74%, #FF9A60 80.08%);
 
@@ -50,6 +50,12 @@ body {
 .box {
     max-width: 1311px;
     width: 100%;
+}
+
+@media (max-width: 1400px) {
+  .box {
+    max-width: 1100px !important;
+  }
 }
 
 button, a, input[type="submit"] {

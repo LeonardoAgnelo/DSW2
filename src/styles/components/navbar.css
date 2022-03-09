@@ -68,3 +68,27 @@
 .botao-logado + .botao-logado {
     margin-left: 64px;
 }
+
+@media (max-width: 1200px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+
+  .navbar-container .navbar-logotipo {
+    width: 30%;
+    margin-bottom: 16px;
+  }
+
+  .navbar-container .navbar-logotipo img {
+    width: 100%;
+  }
+
+  .navbar-container .right-side {
+    font-size: 24px;
+  }
+
+  .navbar-container .right-side .botao-cadastro {
+    width: 180px;
+    height: 40px;
+  }
+}

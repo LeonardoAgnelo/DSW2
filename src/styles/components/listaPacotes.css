@@ -1,4 +1,5 @@
 .lista-pacotes {
+  max-width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 41px;
@@ -101,10 +102,28 @@
   color: var(--primary);
 
   display: flex;
-  align-items:flex-end;
+  align-items: flex-end;
   justify-content: flex-end;
 }
 
 .pacote .pacote-content .pacote-ver a:hover{
   text-decoration: underline !important;
+}
+
+@media (max-width: 1200px) {
+  .lista-pacotes {
+    grid-template-columns: repeat(1, 1fr) !important;
+    justify-items: center !important;
+  }
+
+  .pacote {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .lista-pacotes {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
 }

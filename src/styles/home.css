@@ -13,6 +13,10 @@
     justify-content: center;
 }
 
+.hero-container img {
+  max-width: 672px;
+}
+
 .hero-container h1 {
     max-width: 500px;
 
@@ -59,4 +63,37 @@
 
 .botao-filtrar:hover {
     opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+  .hero-container {
+    margin-bottom: 32px;
+
+    flex-direction: column-reverse;
+  }
+
+  .hero-container h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .hero-container img {
+    width: 90%;
+  }
+
+  main .filtro {
+    flex-direction: column;
+  }
+
+  main .filtro .campo {
+    width: 90% !important;
+    margin-bottom: 8px !important;
+  }
+}
+
+@media (max-width: 1400px) {
+
+  main .filtro .campo {
+    width: 25%;
+  }
 }
