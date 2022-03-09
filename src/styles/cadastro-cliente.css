@@ -86,3 +86,43 @@
 .form-cadastro-cliente .submit:hover {
     opacity: 0.8;
 }
+
+@media (max-width: 1200px) {
+    .cadastro-cliente-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .form-cadastro-cliente {
+        padding: 30px 30px;
+    }
+    
+    .form-cadastro-cliente .campos .campo-container label {
+        font-size: 20px;
+    }
+
+    .form-cadastro-cliente h1 {
+        font-size: 25px;
+    }
+    
+    .form-cadastro-cliente .campos {
+        grid-template-columns: repeat(1, 1fr) !important;
+        justify-items: center !important;
+        width: 100% !important;
+    }
+
+    .form-cadastro-cliente .submit {
+        align-self: center;
+        margin-top: 0px;
+    }
+
+    .form-cadastro-cliente .campos .campo {
+        width: 100% !important;
+        height: 40px !important;
+        width: 100% !important; 
+    }
+
+    #sexo {
+        width: 100% !important;
+    }
+}
