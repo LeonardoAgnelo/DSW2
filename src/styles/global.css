@@ -23,6 +23,12 @@
     --degrade: linear-gradient(276.05deg, #F46918 37.74%, #FF9A60 80.08%);
 
     --shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+    --sm: 576px;
+    --md: 768px;
+    --ld: 992px;
+    --xl: 1200px;
+    --xxl: 1400px;
 }
 
 body {
