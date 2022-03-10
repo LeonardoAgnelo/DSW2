@@ -44,3 +44,19 @@
 .botao-adicionarpacote:hover {
   opacity: 0.8;
 }
+
+@media (max-width: 1200px){
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .botao-adicionarpacote{
+    margin: 0;
+  }
+  .botao-pacotesvigentes{
+    margin-top: 15px;
+    text-align: center;
+  }
+
+}
