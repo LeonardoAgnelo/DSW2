@@ -51,7 +51,8 @@ body {
 .form-login {
     padding: 40px 20px;
 
-    width: 664px;
+    width: 100%;
+    max-width: 664px;
 
     background: var(--white);
 
@@ -126,9 +127,9 @@ body {
 }
 @media (max-width:1200px){
     .form-login{
-        max-width:90vw;
         margin-bottom: 80px;
-    } 
+    }
+
     .login-titulo{
         margin-bottom: 40px !important;
     }
