@@ -17,7 +17,10 @@ th{
     font-weight: bold;
 }
     
-    
+tr:first-child{
+    background-color: #ccc;
+}
+
 tr:nth-child(even) {
     background-color: #DCEBE6;
 }
@@ -29,4 +32,21 @@ tr:hover:nth-child(1n + 2) {
 caption{
     font-size: 36px;
     margin-bottom: 5px;
+}
+
+.name-table{
+    font-size: 32px;
+    text-align: center;
+    margin-block: 10px 10px;
+}
+
+@media (max-width: 1200px){
+    .table{
+        overflow-x: auto;
+        margin: auto 10px;
+        border: 1px solid black;
+    }
+    .name-table{
+        font-size: 30px;
+    }
 }
