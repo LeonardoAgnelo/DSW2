@@ -106,8 +106,7 @@
     }
     
     .form-cadastro-cliente .campos {
-        grid-template-columns: repeat(1, 1fr) !important;
-        justify-items: center !important;
+        grid-template-columns: repeat(1, 1fr) !important;        
         width: 100% !important;
     }
 
@@ -120,9 +119,5 @@
         width: 100% !important;
         height: 40px !important;
         width: 100% !important; 
-    }
-
-    #sexo {
-        width: 100% !important;
     }
 }
