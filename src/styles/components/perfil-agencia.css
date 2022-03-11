@@ -17,7 +17,8 @@
 }
 
 .botao-adicionarpacote{
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 60px;
 
   font-size: 32px;
@@ -53,6 +54,7 @@
   }
   .botao-adicionarpacote{
     margin: 0;
+    width: 100%;
   }
   .botao-pacotesvigentes{
     margin-top: 15px;
