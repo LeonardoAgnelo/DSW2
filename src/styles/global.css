@@ -52,12 +52,6 @@ body {
     width: 100%;
 }
 
-@media (max-width: 1400px) {
-  .box {
-    max-width: 1100px !important;
-  }
-}
-
 button, a, input[type="submit"] {
     cursor: pointer !important;
 }
@@ -128,10 +122,23 @@ ul {
 
     box-shadow: var(--shadow);
 }
+
 .field-erro{
     margin: 10px;
 
     font-weight: 500;
 
     color: #9e001e;
+}
+
+@media (max-width: 1400px) {
+  .box {
+    max-width: 1100px !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .campo {
+    font-size: 18px;
+  }
 }

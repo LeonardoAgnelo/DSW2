@@ -87,7 +87,6 @@ body {
 @media (max-width:1200px) {
     .opcoes-usuario{
         flex-direction: column;
-        width: 90%;
         justify-content: space-evenly;
     }
     .opcao{

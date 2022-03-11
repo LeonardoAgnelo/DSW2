@@ -97,36 +97,38 @@
 
 
 @media (max-width: 1200px) {
-    .cadastro-agencia-container {
-        flex-direction: column;
-        width: 90%;
-    }
-    
-    .form-cadastro-agencia .campos .campo-container label {
-        font-size: 20px;
-    }
+  .form-cadastro-agencia {
+    padding: 30px 30px;
+  }
 
-    .form-cadastro-agencia h1 {
-        font-size: 25px;
-    }
-    
-    .form-cadastro-agencia .campos {
-        grid-template-columns: repeat(1, 1fr) !important;
-        width: 100% !important;
-    }
+  
+  .form-cadastro-agencia h1 {
+    font-size: 25px;
+  }
 
-    .form-cadastro-agencia .campos .campo {
-        width: 100% !important;
-        height: 40px !important;
-        width: 100% !important; 
-    }
+  .form-cadastro-agencia .campos {
+    grid-template-columns: minmax(0, 1fr) !important;
+    column-gap: 0px;
+  }
 
-    .form-cadastro-agencia .campos .campo-container textarea {
-        height: 80px !important;
-    }
+  .form-cadastro-agencia .campos .campo-container {
+    width: 100%;
+  }
 
-    .form-cadastro-agencia .submit {
-        align-self: center;
-        margin-top: 0px;
-    }
+  .form-cadastro-agencia .campos .campo {
+    height: 40px !important;
+  }
+
+  .form-cadastro-agencia .campos .campo-container label {
+    font-size: 20px;
+  }
+
+  .form-cadastro-agencia .campos .campo-container textarea {
+    height: 80px !important;
+  }
+
+  .form-cadastro-agencia .submit {
+    align-self: center;
+    margin-top: 0px;
+  }
 }
