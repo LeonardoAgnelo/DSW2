@@ -42,7 +42,7 @@ caption{
 }
 
 @media (max-width: 1200px){
-    .table{
+    .table table{
         overflow-x: auto;
         margin: auto 10px;
         border: 1px solid black;
