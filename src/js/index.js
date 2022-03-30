@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "http://localhost:8080/pacotes";
+var url = "https://e16b-2804-431-c7d0-4c1d-ac72-26e0-c57b-e6ad.ngrok.io/pacotes";
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
