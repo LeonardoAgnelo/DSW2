@@ -4,7 +4,7 @@ var form = document.getElementById("form-cadastro-cliente");
 form.addEventListener("submit", async function (event){
     event.preventDefault();
 
-    var url = "http://localhost:8080/clientes";
+    var url = "http://localhost:3333/clientes";
     var formData = new FormData(form);
 
     const response = await fetch(url, {
