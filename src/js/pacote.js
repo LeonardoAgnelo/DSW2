@@ -11,21 +11,21 @@ const querystring =  window.location.search
 const urlParam = new URLSearchParams(querystring);
 const id =  urlParam.get('id')
 
-var url = "http://localhost:3333/pacotes"+ id;
+var url = "http://localhost:3333/pacotes/"+ id;
 
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function myFunction(arr){
 
-    var fotos = "";
-    n = arr.qtdfotos
-    for(i=0; i<n;i++){
+    var fotos = ''
+    for(foto of arr.fotos){
         fotos +=
-    '<div class="foto">'+
-        '<img src="'+ url + '/' + arr[i].fotos[i].url +'">'+
-    '</div>';
+          '<div class="foto">'+
+              '<img src="' + foto.url +'">'+
+          '</div>';
     }
+
     document.getElementById("lista-fotos").innerHTML = fotos;
 
     var headerContent = 
@@ -57,11 +57,11 @@ function myFunction(arr){
                 '</div>'+
                 '<div class="dado">'+
                     '<strong>Data de partida</strong>'+
-                    '<p>'+arr.dataPartida+'</p>'+
+                    '<p>'+new Date(arr.dataPartida).toLocaleDateString('pt-BR')+'</p>'+
                 '</div>'+
                 '<div class="dado">'+
                     '<strong>Duração</strong>'+
-                    '<p>'+arr.duracaoDias+'dias</p>'+
+                    '<p>'+arr.duracaoDias+' dias</p>'+
                 '</div>'+
             '</div>'+
             '<div class="descricao dado">'+

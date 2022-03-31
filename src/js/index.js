@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "https://e16b-2804-431-c7d0-4c1d-ac72-26e0-c57b-e6ad.ngrok.io/pacotes";
+var url = "http://localhost:3333/pacotes";
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -16,10 +16,10 @@ function myFunction(arr) {
   var i;
   for(i = 0; i < arr.length; i++) {
       out += '<li class="pacote">' + 
-                '<div class="pacote-image" style="background-image: url(' + url + '/' + arr[i].fotos[0].url + ')"></div>' +
+                '<div class="pacote-image" style="background-image: url(' + arr[i].fotos[0].url + ')"></div>' +
                 '<div class="pacote-content">' +
                   '<div class="pacote-dados">' +
-                    '<strong>'+ arr[i].destinoCidade +'</strong>' +
+                    '<strong>'+ arr[i].destino.cidade +'</strong>' +
                     '<div>' +
                       '<p>Data</p>' +
                       '<p>' + new Date(arr[i].dataPartida).toLocaleDateString('pt-BR') + '</p>' +
@@ -27,7 +27,7 @@ function myFunction(arr) {
                   '</div>' +
                   '<div class="pacote-compra">' +
                     '<strong>R$ ' + arr[i].valor + '</strong>' +
-                    '<a href="pacote.html">Comprar</a>' +
+                    '<a href="pacote.html?id=' + arr[i].id +'">Comprar</a>' +
                   '</div>' +
                 '</div>' +
               '</li>';

@@ -3,13 +3,21 @@ var form = document.getElementById("form-login");
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
   // var xmlhttp = new XMLHttpRequest();
-  var url = "https://e16b-2804-431-c7d0-4c1d-ac72-26e0-c57b-e6ad.ngrok.io/login";
+  var url = "http://localhost:3333/authentication";
   var formData = new FormData(form);
 
   const response = await fetch(url, {
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
     method: 'POST',
-    body: formData,
+    body: JSON.stringify(Object.fromEntries(formData)),
   })
 
-  console.log(response.json())
+  const conta = await response.json()
+
+  localStorage.setItem('excellentVoyage.session', JSON.stringify(conta))
+
+  window.location.replace('/src/pages')
 })
