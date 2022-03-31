@@ -9,7 +9,11 @@ form.addEventListener("submit", async function (event){
 
     const response = await fetch(url, {
         method: 'POST',
-        body: formData,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(Object.fromEntries(formData)),
     })
 
     console.log(response.json())
