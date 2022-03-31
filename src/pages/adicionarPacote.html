@@ -10,52 +10,52 @@
 <body>
     <div class="cadastro-cliente-container box">
         <a class="botao-voltar" href="perfilAgencia.html"><img src="../image/icons/arrow-left.svg" />Voltar</a>
-        <form class="form-cadastro-cliente" method="POST">
+        <form id="form-cadastro-cliente" class="form-cadastro-cliente" method="POST">
             <h1>Adicionar Pacote</h1>
             <div class="campos">
                 <div class="campo-container">
                     <label for="destinoCidade">Cidade</label>
-                    <input class="campo" id="destinoCidade" type="text"/>
+                    <input class="campo" id="destinoCidade"  name="destinoCidade" type="text"/>
 
                 </div>
                 <div class="campo-container">
                     <label for="destinoEstado">Estado</label>
-                    <input class="campo" id="destinoEstado" type="text"/>
+                    <input class="campo" id="destinoEstado" name="destinoEstado"type="text"/>
                 </div>
 
                 <div class="campo-container">
                     <label for="destinoPais">País</label>
-                    <input class="campo" id="destinoPais" type="text"/>
+                    <input class="campo" id="destinoPais" name="destinoPais" type="text"/>
                 </div>
 
                 <div class="campo-container">
                     <label for="data-partida">Data de partida</label>
-                    <input class="campo" id="dataPartida" type="date"/>
+                    <input class="campo" id="dataPartida" name="dataPartida" type="date"/>
                 </div>
 
                 <div class="campo-container">
                     <label for="valor">Valor de pacote</label>
-                    <input class="campo" id="valor" type="valor" th:field="*{valor}"/>
+                    <input class="campo" id="valor" type="valor" name="valor" />
                 </div>
 
                 <div class="campo-container">
                     <label for="duracaoDias">Duração do pacote</label>
-                    <input class="campo" id="duracaoDias" type="number" th:field="*{duracaoDias}"/>
+                    <input class="campo" id="duracaoDias" type="number" name="duracaoDias"/>
 
                 </div>
-
                 <div class="campo-container">
                     <label for="descricaoFile">Descrição do pacote</label>
-                    <input type="file" id="descricaoFile" />
+                    <input type="file" id="descricaoFile" name="descricao"/>
                 </div>
 
                 <div class="campo-container">
                     <label for="fotosFile">Adicionar fotos</label>
-                    <input type="file" id="fotosFile" multiple />
+                    <input type="file" id="fotosFile" name="fotos" multiple />
                 </div>
             </div>
             <input class="submit" type="submit" value="Adicionar" />
         </form>
     </div>
+    <script src="../js/adicionarPacote.js"></script>
 </body>
 </html>
