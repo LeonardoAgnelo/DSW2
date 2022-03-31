@@ -1,4 +1,6 @@
-var form = document.getElementById("form-login");
+var xmlhttp = new XMLHttpRequest();
+var form = document.getElementById("form-cadastro-agencia");
+
 
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
@@ -13,5 +15,6 @@ form.addEventListener("submit", async function (event) {
     },
     body: JSON.stringify(Object.fromEntries(formData)),
 })
-  console.log(response.json())
+
+  //console.log(response.json())
 })
