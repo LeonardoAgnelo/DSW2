@@ -1,4 +1,3 @@
-var xmlhttp = new XMLHttpRequest();
 var form = document.getElementById("form-cadastro-cliente");
 
 form.addEventListener("submit", async function (event){
