@@ -38,7 +38,7 @@ function carregaFormulario(data) {
 
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
-  var url = "http://localhost:3333/pacotes/agencias/" + id;
+  var url = "http://localhost:3333/agencias/" + id;
   console.log(id);
   var formData = new FormData(form);
 
