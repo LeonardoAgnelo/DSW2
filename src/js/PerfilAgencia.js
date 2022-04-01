@@ -37,10 +37,6 @@ function myFunction(arr) {
         '<p>Confira seus pacotes de viagens</p>';
     document.getElementById("texto-inicio").innerHTML = txtInicio;
 
-    let btnAddPacote = 
-      '<a href="adicionarPacote.html?id='+ JSON.parse(conta).usuario.id +'" type="submit" class="botao-adicionarpacote" >+ Adicionar Pacote</a>'
-    document.getElementById("list pacotes").innerHTML = btnAddPacote;
-
     let btnPacote = 
       '<button type="submit" name ="botao-pacotesvigentes" id="botao-pacotesvigentes" class="botao-pacotesvigentes" href="?">Visualizar apenas pacotes vigentes</button>'
     document.getElementById("list pacotes").innerHTML = btnPacote;
@@ -72,10 +68,6 @@ function myFunction(arr) {
 }
 
 function vigentes(arr) {
-    let btnAddPacote = 
-      '<a href="adicionarPacote.html?id='+ JSON.parse(conta).usuario.id +'" type="submit" class="botao-adicionarpacote" >+ Adicionar Pacote</a>'
-    document.getElementById("list pacotes").innerHTML = btnAddPacote;
-
     let btnPacote = 
     '<button type="submit" name ="botao-todosOsPacotes" id="botao-todosOsPacotes" class="botao-pacotesvigentes" href="?">Visualizar todos os pacotes</button>';
     document.getElementById("list pacotes").innerHTML = btnPacote;
