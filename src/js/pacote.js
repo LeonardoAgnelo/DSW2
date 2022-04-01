@@ -17,6 +17,7 @@ var url = "http://localhost:3333/pacotes/"+ id;
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
+
 function myFunction(arr){
 
     var fotos = ''
@@ -73,11 +74,46 @@ function myFunction(arr){
     document.getElementById("pacote-content").innerHTML = pacoteContent;
 
     if (conta && JSON.parse(conta).usuario.tipo == 'cliente') {
+      const url = "http://localhost:3333/compra/verifica/"+ id;
       const btnCompra = document.getElementById('btn-compra')
-      btnCompra.style.visibility = 'inherit'
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+          'Authorization': 'Bearer ' + JSON.parse(conta).token
+        },
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data === true) {
+          btnCompra.style.visibility = 'hidden'
+        } else {
+          btnCompra.style.visibility = 'inherit'
+          btnCompra.onclick = compra
+        }
+      })
     }
 }
 
 
-
-
+function compra() {
+  const url = "http://localhost:3333/compra/pacote/"+ id;
+  fetch(url, {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + JSON.parse(conta).token
+    },
+  }).then(res => res.json())
+    .then(data => {
+      if (!data.error) {
+        alert('Compra realizada com sucesso')
+        const btnCompra = document.getElementById('btn-compra')
+        btnCompra.style.visibility = 'hidden'
+      } else {
+        alert('Ops! houve um erro :/')
+      }
+    })
+}
