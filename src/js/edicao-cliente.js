@@ -18,8 +18,20 @@ fetch('http://localhost:3333/clientes/' + id, {
 
 function carregaFormulario(data) {
   const inputNome = document.getElementById('nome')
+  const inputEmail = document.getElementById('email')
+  const inputCPF = document.getElementById('cpf')
+  const inputTelefone = document.getElementById('telefone')
+  const inputSexo = document.getElementById('sexo')
+  const inputData = document.getElementById('data-nascimento')
 
-  inputNome.value = data.nome
+
+  inputNome.value = data.nome;
+  inputEmail.value = data.email;
+  inputCPF.value = data.cpf;
+  inputTelefone.value = data.telefone;
+  inputSexo.value = data.sexo;
+  inputData.value = data.dataNascimento;
+
 }
 
 form.addEventListener("submit", async function (event) {
