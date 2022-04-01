@@ -1,14 +1,15 @@
-const conta = JSON.parse(localStorage.getItem('excellentVoyage.session'))
+const conta = localStorage.getItem('excellentVoyage.session')
 
-if(conta.usuario.tipo != 'admin'){
+if (!conta || JSON.parse(conta).usuario.tipo != 'admin') {
     window.location.replace('/src/pages')
-}
+  }  
 
 var url1 = "http://localhost:3333/clientes"
 fetch(url1, {
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + JSON.parse(conta).token
     },
     method: 'GET',
   }).then(response => response.json()).then(data => functionCliente(data))
@@ -17,7 +18,8 @@ fetch(url1, {
     fetch(url2, {
     headers: {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + JSON.parse(conta).token
     },
     method: 'GET',
   }).then(response => response.json()).then(data => functionAgencia(data))
