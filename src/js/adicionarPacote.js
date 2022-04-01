@@ -11,7 +11,7 @@ var form = document.getElementById("form-cadastro-cliente");
 
 form.addEventListener("submit", async function (event) {
   event.preventDefault();
-  var url = "http://localhost:3333/Pacotes/" + id;
+  var url = "http://localhost:3333/Pacotes";
   //console.log(id);
   var formData = new FormData(form);
 
