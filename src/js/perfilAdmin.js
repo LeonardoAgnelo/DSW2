@@ -46,22 +46,17 @@ function functionCliente(arr){
         '</tr>';
 
         document.getElementById("tabela-clientes").innerHTML = out;
-
-        // var btnDeleteCliente = document.getElementById("deleteCliente-" + cliente.id)
-        // console.log(btnDeleteCliente)
-        // btnDeleteCliente.onclick = async () => await deletaUsuario('cliente', cliente.id)
-        // btnDeleteCliente.addEventListener("click", eventDeleteCliente)
-
-        // function eventDeleteCliente(){
-        //     let url = 'http://localhost:3333/clientes/'+ cliente.id;
-        //     fetch(url,{method: 'DELETE'})
-        // }
     }
 };
 
 async function deletaUsuario(tipo, id) {
   let url = 'http://localhost:3333/' + tipo + 's/'+ id;
-  if (confirm("Tem certeza de que deseja excluir este usuário? todas as compras deste usuário serão excluidas")) {
+  if(tipo== 'cliente'){
+      let msg = "Tem certeza de que deseja excluir este usuário? todas as compras deste usuário serão excluidas"
+  }else{
+      let msg = "Tem certeza de que deseja excluir este usuário? todas os pacotes turisticos desta agencia serão excluidos"
+  }
+  if (confirm(msg)) {
     await fetch(url, {
       method: 'DELETE',
       headers: {
@@ -83,18 +78,10 @@ function functionAgencia(arr){
             '<td>'+ agencia.email +'</td>'+
             '<td><a href="formularioEdicaoAgencia.html?id='+ agencia.id +'">Editar</a></td>'+
             //falta saber o caminho para excluir uma pessoa
-            '<td><button name="deleteAgencia" id="deleteAgencia" onclick="return confirm("Tem certeza de que deseja excluir este usuário? todas os pacotes turisticos desta agencia serão excluidos");">Remover</button></td>'+
+            '<td><button name="deleteAgencia" id="deleteAgencia-' + cliente.id + '" onclick="deletaUsuario(\'agencia\',' + cliente.id + ')"" >Remover</button></td>'+
         '</tr>';
 
         document.getElementById("tabela-agencias").innerHTML = out;
-
-        var btnDeleteAgencia = document.getElementById("deleteAgencia")
-        btnDeleteAgencia.addEventListener("click", eventDeleteAgencia)
-
-        function eventDeleteAgencia(){
-            let url = 'http://localhost:3333/agencias/'+ agencia.id;
-            fetch(url,{method: 'DELETE'})
-        }
     }
     
 }
