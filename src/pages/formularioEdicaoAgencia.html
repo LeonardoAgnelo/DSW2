@@ -11,7 +11,7 @@
     <div class="cadastro-agencia-container box">
         <a class="botao-voltar" href="perfilAdmin.html"><img src="../image/icons/arrow-left.svg" />Voltar</a>
         <form class="form-cadastro-agencia" id="form-cadastro-agencia">
-            <h1> Editar Agencia #43 </h1>
+            <h1 id="titulo-formulario">Edição Agencia #</h1>
             <div class="campos">
                 <div class="campo-container">
                     <label for="nome">Nome</label>
@@ -27,21 +27,17 @@
                 </div>
                 <div class="campo-container">
                     <label for="senha" >Senha</label>
-                    <input class="campo" id="senha" name="senha" type="password"/>
+                    <input class="campo" readonly="readonly" id="senha" name="senha" value="*********" type="password"/>
                 </div>
                 <div class="campo-container">
                     <label for="descricao" >Descrição</label>
                     <textarea class="campo" id="descricao" name="descricao" type="text" ></textarea>
-                </div>
-                <div class="campo-container">
-                    <label for="confirmarSenha">Confimar Senha</label>
-                    <input class="campo" id="confirmarSenha" name="confirmarSenha" type="password"/>
                 </div>
             
             </div>
             <input class="submit" type="submit" name="bOK" />
         </form>
     </div>
-    <script src="../js/edicao-agencia.js"></script>
+    <!--<script src="../js/edicao-agencia.js"></script>-->
 </body>
 </html>
