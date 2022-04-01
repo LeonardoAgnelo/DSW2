@@ -31,7 +31,7 @@ function carregaFormulario(data) {
   inputNome.value = data.nome;
   inputEmail.value = data.email;
   inputCNPJ.value = data.cnpj;
-  inputDescricao = data.descricao;
+  inputDescricao.value = data.descricao;
 
 }
 
