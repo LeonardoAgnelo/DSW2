@@ -4,7 +4,7 @@ if (!conta || JSON.parse(conta).usuario.tipo != 'agencia') {
     window.location.replace('/src/pages')
 }
 
-var url = "http://localhost:3333/pacotes"
+var url = "http://localhost:3333/pacotes?idAgencia=" + JSON.parse(conta).usuario.id
 fetch(url, {
     headers: {
       'Accept': 'application/json',
@@ -16,11 +16,11 @@ fetch(url, {
 
 
 
-var btn = document.getElementById("botao-pacotesvigentesa")
-btn.addEventListener("click", evento)
+var btn = document.getElementById("botao-pacotesvigentes")
+btn.onclick = evento
 
 function evento(){
-    let url = 'http://localhost:3333/pacotes?vigentes=1';
+    let url = 'http://localhost:3333/pacotes?idAgencia=' + JSON.parse(conta).usuario.id + '&vigentes=1';
     fetch(url, {
         headers: {
           'Accept': 'application/json',
