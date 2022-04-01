@@ -51,10 +51,11 @@ function functionCliente(arr){
 
 async function deletaUsuario(tipo, id) {
   let url = 'http://localhost:3333/' + tipo + 's/'+ id;
+  let msg = ''
   if(tipo== 'cliente'){
-      let msg = "Tem certeza de que deseja excluir este usuário? todas as compras deste usuário serão excluidas"
+      msg = "Tem certeza de que deseja excluir este usuário? todas as compras deste usuário serão excluidas"
   }else{
-      let msg = "Tem certeza de que deseja excluir este usuário? todas os pacotes turisticos desta agencia serão excluidos"
+      msg = "Tem certeza de que deseja excluir este usuário? todas os pacotes turisticos desta agencia serão excluidos"
   }
   if (confirm(msg)) {
     await fetch(url, {
@@ -78,7 +79,7 @@ function functionAgencia(arr){
             '<td>'+ agencia.email +'</td>'+
             '<td><a href="formularioEdicaoAgencia.html?id='+ agencia.id +'">Editar</a></td>'+
             //falta saber o caminho para excluir uma pessoa
-            '<td><button name="deleteAgencia" id="deleteAgencia-' + cliente.id + '" onclick="deletaUsuario(\'agencia\',' + cliente.id + ')"" >Remover</button></td>'+
+            '<td><button name="deleteAgencia" id="deleteAgencia-' + agencia.id + '" onclick="deletaUsuario(\'agencia\',' + agencia.id + ')"" >Remover</button></td>'+
         '</tr>';
 
         document.getElementById("tabela-agencias").innerHTML = out;

@@ -4,13 +4,7 @@ if (!conta || JSON.parse(conta).usuario.tipo != 'agencia') {
     window.location.replace('/src/pages')
 }
 
-document.evento2();
-
-var btn1 = document.getElementById("botao-pacotesvigentes")
-btn1.onclick = evento1
-
-var btn2 = document.getElementById("botao-todosOsPacotes")
-btn1.onclick = evento2
+evento2();
 
 function evento2(){
 var url = "http://localhost:3333/pacotes?idAgencia=" + JSON.parse(conta).usuario.id
@@ -47,6 +41,9 @@ function myFunction(arr) {
     '<button type="submit" name ="botao-pacotesvigentes" id="botao-pacotesvigentes" class="botao-pacotesvigentes" href="?">Visualizar apenas pacotes vigentes</button>'
     document.getElementById("list pacotes").innerHTML = btnPacote;
 
+    var btn1 = document.getElementById("botao-pacotesvigentes")
+    btn1.onclick = evento1
+
     let out = "";
     var i;
     for(i = 0; i < arr.length; i++) {
@@ -74,6 +71,9 @@ function vigentes(arr) {
     let btnPacote = 
     '<button type="submit" name ="botao-todosOsPacotes" id="botao-todosOsPacotes" class="botao-pacotesvigentes" href="?">Visualizar todos os pacotes</button>';
     document.getElementById("list pacotes").innerHTML = btnPacote;
+
+    var btn2 = document.getElementById("botao-todosOsPacotes")
+    btn2.onclick = evento2
 
     let out = "";
     var i;
