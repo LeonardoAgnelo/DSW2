@@ -1,3 +1,4 @@
+const conta = localStorage.getItem('excellentVoyage.session')
 
 var xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange = function() {
@@ -70,6 +71,11 @@ function myFunction(arr){
             '</div>'+
         '</div>';
     document.getElementById("pacote-content").innerHTML = pacoteContent;
+
+    if (conta && JSON.parse(conta).usuario.tipo == 'cliente') {
+      const btnCompra = document.getElementById('btn-compra')
+      btnCompra.style.visibility = 'inherit'
+    }
 }
 
 

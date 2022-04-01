@@ -111,7 +111,7 @@
   align-items: flex-end;
 }
 
-.informacoes-pacote header .pacote-compra a {
+.informacoes-pacote header .pacote-compra button {
   width: 250px;
   height: 80px;
 
@@ -124,6 +124,7 @@
   border: 0;
   border-radius: 15px;
 
+  visibility: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +132,7 @@
   transition: all 0.2s;
 }
 
-.informacoes-pacote header .pacote-compra a:hover{
+.informacoes-pacote header .pacote-compra button:hover{
   opacity: 0.8;
 }
 

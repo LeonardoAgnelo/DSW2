@@ -17,7 +17,12 @@ form.addEventListener("submit", async function (event) {
 
   const conta = await response.json()
 
-  localStorage.setItem('excellentVoyage.session', JSON.stringify(conta))
+  if (!conta.error) {
+    localStorage.setItem('excellentVoyage.session', JSON.stringify(conta))
+  
+    window.location.replace('/src/pages')
+  } else {
+    alert(conta.error)
+  }
 
-  window.location.replace('/src/pages')
 })
