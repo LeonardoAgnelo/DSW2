@@ -2,6 +2,12 @@ const querystring =  window.location.search
 const urlParam = new URLSearchParams(querystring);
 const id =  urlParam.get('id')
 
+const conta = localStorage.getItem('excellentVoyage.session')
+
+if (!conta || JSON.parse(conta).usuario.tipo != 'admin') {
+  window.location.replace('/src/pages')
+}
+
 var tituloForm = document.getElementById('titulo-formulario')
 
 tituloForm.innerHTML += id
@@ -40,14 +46,21 @@ form.addEventListener("submit", async function (event) {
   console.log(id);
   var formData = new FormData(form);
 
-  await fetch(url, {
-    method: 'PUT',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(Object.fromEntries(formData)),
-})
+  try {
+    await fetch(url, {
+      method: 'PUT',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + JSON.parse(conta).token
+      },
+      body: JSON.stringify(Object.fromEntries(formData)),
+    })
+
+    window.location.replace('/src/pages/perfilAdmin.html')
+  } catch (err) {
+    alert(err.error)
+  }
 
     //console.log(response.json())
 })
