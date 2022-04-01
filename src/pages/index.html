@@ -22,10 +22,10 @@
     </header>
     <main>
       <form class="filtro">
-        <input class="campo" type="text" placeholder="Escolha um destino"/>
-        <input class="campo" type="text" placeholder="Escolha uma agência"/>
-        <input class="campo" type="date" placeholder="Data de partida"/>
-        <button class="botao-filtrar" type="submit">Filtrar</button>
+        <input id="destino" class="campo" type="text" placeholder="Escolha um destino"/>
+        <input id="agencia" class="campo" type="text" placeholder="Escolha uma agência"/>
+        <input id="dataPartida" class="campo" type="date" placeholder="Data de partida"/>
+        <button class="botao-filtrar" type="button" onClick="getListaPacotes()">Filtrar</button>
       </form>
       <ul id="lista-pacotes" class="lista-pacotes"></ul>
     </main>

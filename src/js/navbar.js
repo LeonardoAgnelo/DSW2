@@ -1,9 +1,9 @@
-const conta = localStorage.getItem('excellentVoyage.session')
+const sessaoLocalStorage = localStorage.getItem('excellentVoyage.session')
 
 const navbarRightSide = document.getElementById('navbar-right-side')
 
-if (conta) {
-  const usuario = JSON.parse(conta).usuario
+if (sessaoLocalStorage) {
+  const usuario = JSON.parse(sessaoLocalStorage).usuario
 
   navbarRightSide.innerHTML = '<li>' +
     '<a href="perfilAdmin.html" class="botao-logado">' +

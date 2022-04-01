@@ -1,15 +1,23 @@
-var xmlhttp = new XMLHttpRequest();
+
 var url = "http://localhost:3333/pacotes";
 
-xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        var myArr = JSON.parse(this.responseText);
-        myFunction(myArr);
-    }
-};
+function getListaPacotes() {
+  const destino = document.getElementById("destino").value
+  const agencia = document.getElementById("agencia").value
+  const dataPartida = document.getElementById("dataPartida").value
 
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+  fetch(url + `?destino=${destino}&agencia=${agencia}&dataPartida=${dataPartida}`, {
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+    },
+    method: 'GET',
+  })
+    .then(response => response.json())
+    .then(data => myFunction(data))
+}
+
+getListaPacotes()
 
 function myFunction(arr) {
   var out = "";
